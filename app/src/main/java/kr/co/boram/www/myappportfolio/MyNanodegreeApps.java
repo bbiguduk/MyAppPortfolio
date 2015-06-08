@@ -17,12 +17,12 @@ public class MyNanodegreeApps extends ActionBarActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_nanodegree_apps);
 
-        Button btn1 = (Button)findViewById(R.id.btn1);
-        Button btn2 = (Button)findViewById(R.id.btn2);
-        Button btn3 = (Button)findViewById(R.id.btn3);
-        Button btn4 = (Button)findViewById(R.id.btn4);
-        Button btn5 = (Button)findViewById(R.id.btn5);
-        Button btn6 = (Button)findViewById(R.id.btn6);
+        Button btn1 = (Button)findViewById(R.id.streamer);
+        Button btn2 = (Button)findViewById(R.id.scores);
+        Button btn3 = (Button)findViewById(R.id.library);
+        Button btn4 = (Button)findViewById(R.id.bigger);
+        Button btn5 = (Button)findViewById(R.id.reader);
+        Button btn6 = (Button)findViewById(R.id.capstone);
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -34,6 +34,8 @@ public class MyNanodegreeApps extends ActionBarActivity implements View.OnClickL
 
     @Override
     public void onClick(View v) {
+        Toast mAppToast = null;
+
         Resources resources = this.getResources();
         String message = "";
 
@@ -41,27 +43,32 @@ public class MyNanodegreeApps extends ActionBarActivity implements View.OnClickL
         String btnName = btn.getText().toString();
 
         switch (v.getId()) {
-            case R.id.btn1:
+            case R.id.streamer:
                 message = String.format(resources.getString(R.string.btn_toast), btnName);
                 break;
-            case R.id.btn2:
+            case R.id.scores:
                 message = String.format(resources.getString(R.string.btn_toast), btnName);
                 break;
-            case R.id.btn3:
+            case R.id.library:
                 message = String.format(resources.getString(R.string.btn_toast), btnName);
                 break;
-            case R.id.btn4:
+            case R.id.bigger:
                 message = String.format(resources.getString(R.string.btn_toast), btnName);
                 break;
-            case R.id.btn5:
+            case R.id.reader:
                 message = String.format(resources.getString(R.string.btn_toast), btnName);
                 break;
-            case R.id.btn6:
+            case R.id.capstone:
                 message = String.format(resources.getString(R.string.btn_toast), btnName);
                 break;
         }
 
-        Toast.makeText(this, message,Toast.LENGTH_LONG).show();
+        if(mAppToast != null) {
+            mAppToast.cancel();
+        }
+
+        mAppToast = Toast.makeText(this, message,Toast.LENGTH_LONG);
+        mAppToast.show();
     }
 
     @Override

@@ -9,68 +9,76 @@
     <TextView android:text="@string/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:padding="20dp"
+        android:layout_marginBottom="@dimen/btn_list_margin"
+        android:padding="@dimen/btn_padding"
         android:gravity="center"
         android:textSize="20sp" />
 
-    <Button
-        style="@style/BtnStyle"
-        android:id="@+id/btn1"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:padding="20dp"
-        android:text="@string/btn1" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button
+                style="@style/BtnStyle"
+                android:id="@+id/streamer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/btn_list_margin"
+                android:gravity="center"
+                android:padding="@dimen/btn_padding"
+                android:text="@string/btn1" />
 
-    <Button
-        style="@style/BtnStyle"
-        android:id="@+id/btn2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:padding="20dp"
-        android:text="@string/btn2" />
+            <Button
+                style="@style/BtnStyle"
+                android:id="@+id/scores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/btn_list_margin"
+                android:gravity="center"
+                android:padding="@dimen/btn_padding"
+                android:text="@string/btn2" />
 
-    <Button
-        style="@style/BtnStyle"
-        android:id="@+id/btn3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:padding="20dp"
-        android:text="@string/btn3" />
+            <Button
+                style="@style/BtnStyle"
+                android:id="@+id/library"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/btn_list_margin"
+                android:gravity="center"
+                android:padding="@dimen/btn_padding"
+                android:text="@string/btn3" />
 
-    <Button
-        style="@style/BtnStyle"
-        android:id="@+id/btn4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:padding="20dp"
-        android:text="@string/btn4" />
+            <Button
+                style="@style/BtnStyle"
+                android:id="@+id/bigger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/btn_list_margin"
+                android:gravity="center"
+                android:padding="@dimen/btn_padding"
+                android:text="@string/btn4" />
 
-    <Button
-        style="@style/BtnStyle"
-        android:id="@+id/btn5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:padding="20dp"
-        android:text="@string/btn5" />
+            <Button
+                style="@style/BtnStyle"
+                android:id="@+id/reader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/btn_list_margin"
+                android:gravity="center"
+                android:padding="@dimen/btn_padding"
+                android:text="@string/btn5" />
 
-    <Button
-        style="@style/BtnStyle_1"
-        android:id="@+id/btn6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="20dp"
-        android:text="@string/btn6" />
-
+            <Button
+                style="@style/BtnStyle_1"
+                android:id="@+id/capstone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/btn_padding"
+                android:text="@string/btn6" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
